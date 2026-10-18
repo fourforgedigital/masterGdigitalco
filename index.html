@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Remember the visitor's theme before the page paints (default is dark) -->
+  <script>try{var t=localStorage.getItem("mg-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- ===== SEO ===== -->
+  <title>Master G Digital Co. | Social Media & Meta Ads Agency</title>
+  <meta name="description" content="Master G Digital Co.: social media marketing and ads agency for Meta ads, Google ads, reels, branding and websites. Strategy, Content, Results.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#08080c">
+
+  <!-- Social share preview (WhatsApp / Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Master G Digital Co.">
+  <meta property="og:title" content="Master G Digital Co. | Social Media & Meta Ads Agency">
+  <meta property="og:description" content="Master G Digital Co.: social media marketing and ads agency for Meta ads, Google ads, reels, branding and websites. Strategy, Content, Results.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Master G Digital Co. | Social Media & Meta Ads Agency">
+  <meta name="twitter:description" content="Master G Digital Co.: social media marketing and ads agency for Meta ads, Google ads, reels, branding and websites. Strategy, Content, Results.">
+  <!-- AFTER HOSTING, add these two lines with your real domain:
+       <meta property="og:image" content="https://YOUR-DOMAIN/images/logo.png">
+       <link rel="canonical" href="https://YOUR-DOMAIN/"> -->
+
+  <!-- Structured data: tells Google about the company, founder and social pages -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Master G Digital Co.",
+      "description": "Master G Digital Co.: social media marketing and ads agency for Meta ads, Google ads, reels, branding and websites. Strategy, Content, Results.",
+      "slogan": "Your Social Media Partner",
+      "telephone": "+917023629103",
+      "email": "mastergdigitalco@gmail.com",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61593951343798",
+        "https://www.instagram.com/mastergdigitalco"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Aashish Acharya",
+        "jobTitle": "Founder",
+        "sameAs": [
+          "https://www.instagram.com/____.j_e_r_r_y.____",
+          "https://www.facebook.com/share/1LGvdmPWy8/"
+        ]
+      },
+      "knowsAbout": [
+        "Social media marketing",
+        "Meta Ads",
+        "Google Ads",
+        "Content and reels",
+        "Branding",
+        "Website design"
+      ]
+    }
+  </script>
+
+  <link rel="icon" href="images/logo.png">
+
+  <!-- ===== FONTS (Google Fonts) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ===== STYLES ===== -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Safety: hide the loading screen after 4.5 s even if something fails -->
+  <script>setTimeout(function(){var l=document.getElementById("loader");if(l)l.classList.add("done")},4500)</script>
+
+  <!-- SVG gradient used by the Instagram icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".3" stop-color="#fa7e1e"/><stop offset=".55" stop-color="#d62976"/><stop offset=".8" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs></svg>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader"><div class="ld"><img src="images/logo.png" alt=""><i></i></div></div>
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="bar"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header id="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top" aria-label="Master G Digital Co. - home">
+        <img src="images/logo.png" alt="">
+        <span><b>MASTER G</b><small>DIGITAL CO.</small></span>
+      </a>
+      <div class="nav-r">
+        <nav class="menu" id="menu" aria-label="Main">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#work">Work</a>
+          <a href="#founder">Founder</a>
+          <a href="#clients">Clients</a>
+          <a class="btn btn-primary" href="#contact">Let's talk</a>
+        </nav>
+        <!-- THEME TOGGLE: sun = switch to light, moon = switch to dark -->
+        <button id="theme" aria-label="Switch between dark and light theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <button id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Side rail: shows which section you are on (desktop only) -->
+  <nav class="rail" aria-label="Sections">
+    <a href="#services"><span>Services</span><i></i></a>
+    <a href="#process"><span>Process</span><i></i></a>
+    <a href="#work"><span>Work</span><i></i></a>
+    <a href="#founder"><span>Founder</span><i></i></a>
+    <a href="#clients"><span>Clients</span><i></i></a>
+    <a href="#contact"><span>Contact</span><i></i></a>
+  </nav>
+
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="wrap">
+        <span class="eyebrow">Social media &amp; ads agency</span>
+        <h1>
+          <span class="mask"><span style="--i:0">We</span></span>
+          <span class="mask"><span style="--i:1">turn</span></span>
+          <span class="mask"><span class="grad" style="--i:2">attention</span></span><br>
+          <span class="mask"><span style="--i:3">into</span></span>
+          <span class="mask"><span class="grad" style="--i:4">results.</span></span>
+        </h1>
+        <!-- Typing line: "We master ADS / REELS / GROWTH / REACH..." (words are in js/main.js, section 7B) -->
+        <p class="rot-line">We master <span class="rot" id="rot"></span><span class="caret"></span></p>
+        <p class="lead">Master G Digital Co. is your social media partner. Complete ads solutions, from strategy and content to measurable growth.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Start a campaign &rarr;</a>
+          <a class="btn btn-ghost" href="#work">View our work</a>
+        </div>
+        <ul class="tags">
+          <li>Meta Ads</li><li>Google Ads</li><li>Reels &amp; Content</li><li>Branding</li><li>Websites</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CROSSING RIBBONS: two bands that cross like an X. They move with the page:
+         scrolling makes them faster and skews the text, scrolling up reverses them. (js/main.js, section 7) ===== -->
+    <div class="ribbons" id="ribbons" aria-hidden="true">
+      <div class="rib rib-y"><div class="rt" data-dir="-1"><span>Strategy</span><span>Content</span><span>Results</span><span>Social Ads</span><span>Branding</span><span>Growth</span></div></div>
+      <div class="rib rib-k"><div class="rt" data-dir="1"><span>Reels</span><span>Reach</span><span>Leads</span><span>Meta Ads</span><span>Google Ads</span><span>Websites</span></div></div>
+    </div>
+
+    <!-- ===== MANIFESTO: words light up while scrolling ===== -->
+    <section id="manifesto">
+      <div class="wrap"><p class="mf" id="mf">We don't just run ads. We build brands people remember, campaigns people trust, and growth that keeps compounding.</p></div>
+    </section>
+
+    <!-- ===== STATS: counters (data-n = final number, data-s = suffix) ===== -->
+    <section id="stats" style="padding-top:0">
+      <div class="wrap">
+        <div class="stats">
+          <div class="stat rv"><b class="num grad" data-n="1500" data-s="+">0</b><span>Clients &amp; projects delivered</span><div class="meter"><i data-w="100"></i></div></div>
+          <div class="stat rv"><b class="num grad" data-n="98" data-s="%">0</b><span>Client retention rate</span><div class="meter"><i data-w="98"></i></div></div>
+          <div class="stat rv"><b class="num grad" data-n="11" data-s="+">0</b><span>Years of digital growth</span><div class="meter"><i data-w="75"></i></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services">
+      <div class="wrap">
+        <div class="sec-head rv"><span class="eyebrow">01 &mdash; Services</span><h2>Complete <span class="grad">ads solutions</span></h2></div>
+        <ul class="svc">
+          <li class="rv"><span class="n">01</span><h3>Social Media Ads</h3><p>Instagram, Facebook and WhatsApp campaigns built to convert.</p><span class="go">&rarr;</span></li>
+          <li class="rv"><span class="n">02</span><h3>Google &amp; Search Ads</h3><p>Be found at the exact moment customers are searching.</p><span class="go">&rarr;</span></li>
+          <li class="rv"><span class="n">03</span><h3>Content &amp; Reels</h3><p>Scroll-stopping videos, posts and creatives.</p><span class="go">&rarr;</span></li>
+          <li class="rv"><span class="n">04</span><h3>Branding</h3><p>Logos, identity and a look people remember.</p><span class="go">&rarr;</span></li>
+          <li class="rv"><span class="n">05</span><h3>Analytics &amp; Reports</h3><p>Clear numbers on reach, leads and ROI.</p><span class="go">&rarr;</span></li>
+          <li class="rv"><span class="n">06</span><h3>Websites &amp; Pages</h3><p>Fast, beautiful pages that turn clicks into clients.</p><span class="go">&rarr;</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section id="process">
+      <div class="wrap">
+        <div class="sec-head rv"><span class="eyebrow">02 &mdash; Process</span><h2>From idea to <span class="grad">impact</span></h2></div>
+        <div class="pline"><i></i></div>
+        <div class="steps">
+          <div class="step rv"><span class="n">01</span><h3>Strategy</h3><p>We study your market, audience and goals.</p></div>
+          <div class="step rv"><span class="n">02</span><h3>Creative</h3><p>Content and ads designed to stop the scroll.</p></div>
+          <div class="step rv"><span class="n">03</span><h3>Launch</h3><p>Campaigns go live across the right platforms.</p></div>
+          <div class="step rv"><span class="n">04</span><h3>Optimize</h3><p>We track, test and scale what works.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORK: tabs + gallery are built by js/main.js (edit the PJ list there) ===== -->
+    <section id="work">
+      <div class="wrap">
+        <div class="sec-head rv"><span class="eyebrow">03 &mdash; Work</span><h2>Selected <span class="grad">projects</span></h2></div>
+        <div class="tabs" id="tabs">
+          <button data-f="all" class="on">All</button>
+          <button data-f="pol">Political</button>
+          <button data-f="fmcg">FMCG</button>
+          <button data-f="med">Healthcare</button>
+          <button data-f="biz">Business</button>
+          <button data-f="trv">Travel</button>
+          <button data-f="own">Agency</button>
+          <button data-f="spi">Spiritual</button>
+          <button data-f="fes">Festival</button>
+        </div>
+        <!-- "All" tab: one cover card per project (built by js/main.js). Other tabs: every design of that category. -->
+        <div id="ov" class="ov"></div>
+        <div id="gal"></div>
+      </div>
+    </section>
+
+    <!-- ===== FOUNDER ===== -->
+    <section id="founder">
+      <div class="wrap founder">
+        <div class="photo rv">
+          <img src="images/founder.jpg" alt="Aashish Acharya, Founder of Master G Digital Co." width="900" height="1350">
+          <div class="badge">11+<small>Years in digital marketing</small></div>
+        </div>
+        <div class="rv">
+          <span class="eyebrow">04 &mdash; Founder</span>
+          <h2>Aashish <span class="grad">Acharya</span></h2>
+          <p class="role">Founder &amp; digital marketing strategist</p>
+          <ul class="bio">
+            <li>Aashish Acharya is the founder of Master G Digital Co., a social media and ads partner for growing brands.</li>
+            <li>With 11+ years in digital marketing, he has seen the industry grow from simple posts to data-driven performance campaigns.</li>
+            <li>He has worked with more than 1,500 clients and projects across many industries.</li>
+            <li>His approach starts with strategy, because great creative works only when it speaks to the right audience.</li>
+            <li>He believes every rupee of ad spend should be tracked, tested and tied to a real result.</li>
+            <li>From social media ads to content, branding and analytics, he leads campaigns from start to finish.</li>
+            <li>Clients value his honest advice, clear reporting and quick communication.</li>
+            <li>His focus is long-term growth rather than quick wins, which is why clients stay with Master G.</li>
+            <li>He keeps the team ahead of every platform change, trend and algorithm update.</li>
+            <li>His promise is simple: Strategy, Content, Results.</li>
+          </ul>
+          <div class="soc"><a href="https://www.instagram.com/____.j_e_r_r_y.____" target="_blank" rel="noopener noreferrer" aria-label="Aashish Acharya on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="url(#igg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="url(#igg)" stroke="none"/></svg><span>Instagram</span></a><a href="https://www.facebook.com/share/1LGvdmPWy8/" target="_blank" rel="noopener noreferrer" aria-label="Aashish Acharya on Facebook"><svg viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg><span>Facebook</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLIENTS: the 3 scrolling rows are built by js/main.js (edit the R list there) ===== -->
+    <section id="clients">
+      <div class="wrap"><div class="sec-head rv"><span class="eyebrow">05 &mdash; Clients</span><h2>Loved by <span class="grad">1500+ clients</span></h2></div></div>
+      <div class="row"><div class="track"></div></div>
+      <div class="row"><div class="track"></div></div>
+      <div class="row"><div class="track"></div></div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="sec-head rv"><span class="eyebrow">FAQ</span><h2>Questions, <span class="grad">answered</span></h2></div>
+        <div class="faq rv">
+          <details><summary>Which platforms do you run ads on?</summary><p>Instagram, Facebook, WhatsApp, Google Search and YouTube, chosen based on where your customers actually spend their time.</p></details>
+          <details><summary>How soon will I see results?</summary><p>Early signals like reach and engagement show within weeks. Steady growth in leads and sales builds as we test and optimize every month.</p></details>
+          <details><summary>Do you create the content as well?</summary><p>Yes. Reels, creatives, copy and branding are handled together, so strategy, content and ads work as one system.</p></details>
+          <details><summary>How do I track performance?</summary><p>You get clear reports on reach, leads and ROI, so you always know exactly where your budget is going.</p></details>
+          <details><summary>How do we get started?</summary><p>Message us on WhatsApp or use the form below. We will understand your goals and suggest a plan.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT: the form opens WhatsApp ===== -->
+    <section id="contact">
+      <div class="wrap contact">
+        <div class="rv">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's build your <span class="grad">next big thing</span></h2>
+          <div class="cinfo">
+            <a href="tel:+917023629103"><small>WhatsApp / Call</small>+91 70236 29103</a>
+            <a href="mailto:mastergdigitalco@gmail.com"><small>Email</small>mastergdigitalco@gmail.com</a>
+          </div>
+        </div>
+        <form id="fm" class="rv">
+          <input placeholder="Your name" required>
+          <input placeholder="Phone / WhatsApp" required>
+          <textarea rows="5" placeholder="Tell us about your project"></textarea>
+          <button class="btn btn-primary" type="submit">Send message &rarr;</button>
+          <p id="ok"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="#top"><img src="images/logo.png" alt=""><span><b>MASTER G</b><small>DIGITAL CO.</small></span></a>
+        <div class="soc"><a href="https://www.instagram.com/mastergdigitalco" target="_blank" rel="noopener noreferrer" aria-label="Master G Digital Co. on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="url(#igg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="url(#igg)" stroke="none"/></svg><span>Instagram</span></a><a href="https://www.facebook.com/profile.php?id=61593951343798" target="_blank" rel="noopener noreferrer" aria-label="Master G Digital Co. on Facebook"><svg viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg><span>Facebook</span></a></div>
+      </div>
+      <div class="legal">
+        <span>&copy; 2026 Master G Digital Co. &middot; Strategy | Content | Results</span>
+        <span>Designed and created by <a href="https://www.linkedin.com/in/lakshya-acharya-9194b3203" target="_blank" rel="noopener">Lakshya Acharya</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a class="wa" href="https://wa.me/917023629103" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.8 2.1 1.2 1 2.2 1.4 2.5 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.3.1.9-.1 1.4z"/></svg></a>
+
+  <!-- LIGHTBOX (full-screen photo viewer) -->
+  <div id="lb" aria-modal="true">
+    <button class="lbtn" id="lx" aria-label="Close">&#10005;</button>
+    <button class="lbtn" id="lp" aria-label="Previous">&#8249;</button>
+    <img id="li" alt="">
+    <button class="lbtn" id="ln" aria-label="Next">&#8250;</button>
+    <div id="lc"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
