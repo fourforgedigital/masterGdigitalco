@@ -7,7 +7,7 @@ const q = (s, c = document) => c.querySelector(s);           // first match
 // ===== 1. SETTINGS =====
 const WHATSAPP = '917023629103';   // contact form sends messages to this number
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const img = k => `images/work/${k}.jpg`;   // work photos live in images/work/
+const img = k => `images/work/${k}`;   // work photos live in images/work/
 
 // ===== 2. CONTENT LISTS (edit these to add clients / projects) =====
 // CLIENTS: [name, work we did, industry label, optional star rating 1-5, optional quote]
@@ -22,8 +22,6 @@ const R = [
     ], [
         'Dr. Bhuvnesh Narayan Purohit', 'Clinic awareness ad series for a medical oncologist, in Hindi and English. Bikaner.', 'Healthcare'
     ], [
-        'Pt. Tri Vikram Vyas', 'Adhik Maas awareness and kundli consultation poster for an astrologer.', 'Spiritual · Astrology'
-    ], [
         'Bikaner Ward Campaigns', 'Candidate posters for municipal ward election campaigns in Bikaner.', 'Political Campaigns'
     ], [
         'Community Festival Greeting', 'Milad-un-Nabi greeting poster for a local community leader.', 'Festival · Greetings'
@@ -33,38 +31,15 @@ const R = [
 // WORK PROJECTS: t = title, c = label, f = filter key, n = note,
 // g = photos [[fileName, caption], ...] (files are in images/work/)
 const PJ = [
-    {
-        t: 'Gagan Masale', c: 'FMCG', f: 'fmcg', n: 'Spice brand ad series', g: [
-            ['gagan-turmeric-dark', 'Turmeric Powder \u00b7 Dark'], ['gagan-sabut-masala', 'Sabut Masala'], ['gagan-coriander', 'Coriander Powder'], ['gagan-turmeric', 'Turmeric Powder'], ['gagan-red-chilli', 'Red Chilli Powder'], ['gagan-sabut-masala-chef', 'Sabut Masala \u00b7 Chef']
-        ]
-    },
-    {
-        t: 'Master G Digital Co.', c: 'Agency', f: 'own', n: 'Meta Ads lead generation creative', g: [['master-g-promo']]
-    },
-    {
-        t: 'Municipal Election Campaigns', c: 'Political', f: 'pol', n: 'Ward-level campaign posters', g: [
-            ['ward-62-campaign', 'Ward 62 Campaign'], ['ward-60-campaign', 'Ward 60 Campaign'], ['ward-2-campaign', 'Ward 2 Campaign']
-        ]
-    },
-    {
-        t: 'Sikkim Trading Company', c: 'Business', f: 'biz', n: 'Financial services ad', g: [['sikkim-trading']]
-    },
-    {
-        t: 'Oncology Clinic Ads', c: 'Healthcare', f: 'med', n: 'Doctor clinic ad series', g: [
-            ['clinic-ad-hindi', 'Clinic Ad · Hindi'], ['clinic-ad-square', 'Clinic Ad · Square'], ['clinic-ad-teal-poster', 'Clinic Ad · Teal Poster'], ['clinic-ad-blue-poster', 'Clinic Ad · Blue Poster']
-        ]
-    },
-    {
-        t: 'PPT Fleet Service', c: 'Travel', f: 'trv', n: 'Corporate fleet and airport transfer ads', g: [
-            ['ppt-fleet-options', 'Fleet Options'], ['ppt-airport-pickup', 'Airport Pickup & Drop'], ['ppt-corporate-trust', 'Corporate Trust']
-        ]
-    },
-    {
-        t: 'Astrology Consultation', c: 'Spiritual', f: 'spi', n: 'Adhik Maas awareness poster', g: [['astrology-adhik-maas']]
-    },
-    {
-        t: 'Milad-un-Nabi Greeting', c: 'Festival', f: 'fes', n: 'Festival greeting poster', g: [['milad-un-nabi-greeting']]
-    }
+    { t:'Gagan Masale', c:'FMCG', f:'fmcg', n:'Spice brand ad series', g:[['gagan-turmeric-dark.jpg','Turmeric Powder · Dark'],['gagan-sabut-masala.jpg','Sabut Masala'],['gagan-coriander.jpg','Coriander Powder'],['gagan-turmeric.jpg','Turmeric Powder'],['gagan-red-chilli.jpg','Red Chilli Powder'],['gagan-sabut-masala-chef.jpg','Sabut Masala · Chef']] },
+    { t:'Oncology Clinic Ads', c:'Healthcare', f:'med', n:'Doctor clinic ad series', g:[['clinic-ad-hindi.jpg','Clinic Ad · Hindi'],['clinic-ad-square.jpg','Clinic Ad · Square'],['clinic-ad-teal-poster.jpg','Clinic Ad · Teal Poster'],['clinic-ad-blue-poster.jpg','Clinic Ad · Blue Poster']] },
+    { t:'PPT Fleet Service', c:'Travel', f:'trv', n:'Corporate fleet and airport transfer creatives', g:[['webb-02-IMG_1632.JPG-1.jpeg', 'Vehicle Fleet Options'], ['webb-03-IMG_1635.JPG-1.jpeg', 'Airport Pickup & Drop'], ['webb-04-IMG_1636.JPG.jpeg', 'Corporate Cab Service'], ['webb-05-IMG_1641.JPG.jpeg', 'PPT Fleet Brand Creative'], ['webb-06-IMG_1642.JPG.jpeg', 'Safety & Security'], ['webb-07-IMG_1643.JPG-1.jpeg', 'Trusted by Leading Companies']] },
+    { t:'Rahul Premium Foods', c:'FMCG', f:'fmcg', n:'Food and edible oil advertising campaign', g:[['webb-08-IMG_1655.JPG.jpeg', 'Premium Quality Edible Oil'], ['webb-09-IMG_1656.JPG.jpeg', 'Brand Product Promotion'], ['webb-10-IMG_1657.JPG.jpeg', 'Premium Quality Campaign'], ['webb-11-IMG_1658.JPG.jpeg', 'Product Range Promotion'], ['webb-12-IMG_1659.JPG.jpeg', 'Healthy Cooking Campaign'], ['webb-13-IMG_1660.JPG.jpeg', 'Family & Food Campaign'], ['webb-14-IMG_1661.JPG.jpeg', 'Festival Food Creative'], ['webb-15-IMG_1662.JPG.jpeg', 'Healthy Cooking Starts Here']] },
+    { t:'G.T. Gold', c:'FMCG', f:'fmcg', n:'Edible oil product creatives', g:[['webb-16-IMG_1705.JPG.jpeg', 'G.T. Gold Product Ad'], ['webb-29-IMG_2013.JPG.jpeg', 'Golden Banao'], ['webb-30-IMG_2015.JPG.jpeg', 'Unleash the Gold'], ['webb-31-IMG_2400.JPG.jpeg', 'Sunehra Mot Campaign'], ['webb-32-IMG_2402.JPG.jpeg', 'Shuddhata Ka Swad'], ['webb-33-IMG_2403.JPG.jpeg', 'Sehat Ki Guarantee'], ['webb-34-IMG_2405.JPG.jpeg', 'Golden Banao Campaign'], ['webb-35-IMG_2406.JPG.jpeg', 'Golden Banao Product Creative']] },
+    { t:'M.S.P.G. College', c:'Education', f:'edu', n:'Admissions and college promotional creatives', g:[['webb-17-IMG_1785.JPG.jpeg', 'College Logo'], ['webb-18-IMG_1786.png', 'Admission Open 2025–26'], ['webb-19-IMG_1787.png', 'Admission Open 2026–27'], ['webb-20-IMG_1788.png', 'Admission Campaign'], ['webb-21-IMG_1789.png', 'Admission Campaign'], ['webb-22-IMG_1793.png', 'Admission Open Creative'], ['webb-23-IMG_1794.png', 'College Admission Creative'], ['webb-24-IMG_1798.png', 'Course Information Poster']] },
+    { t:'Beyond School Education', c:'Education', f:'edu', n:'School education and admission awareness creatives', g:[['webb-25-IMG_1800.JPG.jpeg', 'Beyond School Education'], ['webb-26-IMG_1801.png', 'Education Awareness'], ['webb-27-IMG_1802.png', 'School Performance Campaign'], ['webb-28-IMG_1803.png', 'Education Promotion']] },
+    { t:'Shree Shyam Hardware', c:'Hardware', f:'biz', n:'Hardware and industrial product advertising', g:[['webb-36-IMG_2551.JPG.jpeg', 'Shree Shyam Hardware'], ['webb-37-IMG_2552.JPG.jpeg', 'Industrial Product Promotion'], ['webb-38-IMG_2554.JPG.jpeg', 'Hardware Product Range'], ['webb-39-IMG_2555.JPG.jpeg', 'Hardware Brand Creative']] },
+    { t:'Pink Steps', c:'Healthcare', f:'med', n:'Healthcare awareness and clinic promotion', g:[['webb-41-IMG_5375.png', 'Pink Steps Healthcare Creative']] }
 ];
 
 // ===== 3. LOADING SCREEN =====

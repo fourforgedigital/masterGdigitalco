@@ -225,7 +225,7 @@ h2 { font-size: clamp(2rem, 4.4vw, 3.4rem); text-wrap: balance; }
 .tabs button.on::after { transform: scaleX(1); }
 
 /* "All" view: one cover card per project, stacked look when it has several designs */
-.ov { columns: 3 260px; column-gap: 30px; }
+.ov { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 30px; row-gap: 0; align-items: start; }
 .pc { margin-bottom: 44px; break-inside: avoid; cursor: pointer; }
 .pc-img { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
 .pc.multi .pc-img { margin: 0 14px 14px 0; overflow: visible; border: 0; background: none; }
@@ -372,7 +372,7 @@ footer { padding: 56px 0 90px; border-top: 1px solid var(--line); }
   .gg.one { columns: 1; }
   .client { width: 270px; }
   /* Work "All" view: two small cards per row on phones so the section stays short */
-  .ov { columns: 2 130px; column-gap: 16px; }
+  .ov { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
   .pc { margin-bottom: 30px; }
   .pc-meta h3 { font-size: .92rem; }
   .pc-meta b { font-size: 1.1rem; }
